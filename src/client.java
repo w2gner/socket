@@ -11,13 +11,13 @@ public class client {
 
         Scanner read = new Scanner(System.in);
 
-        Socket socket = new Socket("127.0.0.1", 55555);
+        Socket socket = new Socket("192.168.56.1", 55555);
 
         DataOutputStream output = new DataOutputStream(socket.getOutputStream());
         DataInputStream input = new DataInputStream(socket.getInputStream());
 
+        System.out.println("Insira uma mensagem para inverter: ");
         do {
-            System.out.println("Insira uma mensage para inverter: ");
             String message = read.next();
             if (message.equalsIgnoreCase("exit")) {
                 break;
